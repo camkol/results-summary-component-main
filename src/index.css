@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("../assets/fonts/HankenGrotesk-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900; /* Range of weights */
+  font-style: normal;
+  font-variation-settings: "wght" 900;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.app {
+  font-family: "Hanken Grotesk", sans-serif;
+}

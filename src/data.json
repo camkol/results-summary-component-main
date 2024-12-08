@@ -1,0 +1,30 @@
+[
+  {
+    "category": "Reaction",
+    "score": 80,
+    "icon": "./assets/images/icon-reaction.svg",
+    "background": "bg-red-50",
+    "text": "text-red-600"
+  },
+  {
+    "category": "Memory",
+    "score": 92,
+    "icon": "./assets/images/icon-memory.svg",
+    "background": "bg-yellow-50",
+    "text": "text-yellow-600"
+  },
+  {
+    "category": "Verbal",
+    "score": 61,
+    "icon": "./assets/images/icon-verbal.svg",
+    "background": "bg-teal-50",
+    "text": "text-teal-600"
+  },
+  {
+    "category": "Visual",
+    "score": 72,
+    "icon": "./assets/images/icon-visual.svg",
+    "background": "bg-indigo-50",
+    "text": "text-indigo-600"
+  }
+]
