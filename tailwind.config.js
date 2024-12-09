@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       borderRadius: {
         "b-4xl": "0 0 3rem 3rem",
+        "4xl": "3rem",
       },
     },
   },

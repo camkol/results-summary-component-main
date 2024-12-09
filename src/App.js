@@ -5,8 +5,8 @@ function App() {
   const [average, setAverage] = useState(0);
 
   return (
-    <div className="App">
-      <div className="text-lg">
+    <div className="App lg:h-screen">
+      <div className="text-lg lg:flex lg:rounded-4xl lg:drop-shadow-md lg:m-auto lg:w-fit lg:h-fit">
         <Result average={average} />
         <Summary setAverage={setAverage} />
       </div>
@@ -21,7 +21,7 @@ export default App;
 function Result({ average }) {
   return (
     <div
-      className="text-center bg-gradient-to-b from-indigo-600 to-indigo-800 p-10 rounded-b-4xl"
+      className="text-center bg-gradient-to-b from-indigo-600 to-indigo-800 p-10 rounded-b-4xl lg:w-96 lg:rounded-4xl"
       // style={{
       //   borderBottomRightRadius: "3rem",
       //   borderBottomLeftRadius: "3rem",
@@ -56,7 +56,7 @@ function Summary({ setAverage }) {
   }, [reaction.score, memory.score, verbal.score, visual.score, setAverage]);
 
   return (
-    <div className="p-9">
+    <div className="p-9 lg:w-96">
       <h3 className="text-xl mb-7 font-medium">Summary</h3>
       <div className="space-y-4">
         {summaries.map((sum, i) => (
@@ -71,7 +71,7 @@ function Summary({ setAverage }) {
 }
 function Attribution() {
   return (
-    <div className="attribution">
+    <div className="attribution lg:b-0">
       Challenge by
       <a
         href="https://www.frontendmentor.io?ref=challenge"
