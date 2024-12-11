@@ -1,6 +1,6 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 @font-face {
   font-family: "Hanken Grotesk";
@@ -21,4 +21,10 @@
 }
 .app {
   font-family: "Hanken Grotesk", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .attribution {
+    bottom: 0;
+  }
 }

@@ -5,14 +5,28 @@ function App() {
   const [average, setAverage] = useState(0);
 
   return (
-    <div className="App lg:h-screen">
-      <div className="text-lg lg:flex lg:rounded-4xl lg:drop-shadow-md lg:m-auto lg:w-fit lg:h-fit">
-        <Result average={average} />
-        <Summary setAverage={setAverage} />
-      </div>
+    <>
+      <div className="App md:h-screen flex items-center justify-center">
+        <style>
+          {`
+          @media (min-width: 768px) {
+            .rounded-4xl {
+              border-radius: 3rem;
+            }
+              .w-88{
+              width:344px
+              }
+          }
+        `}
+        </style>
+        <div className="text-lg md:flex rounded-4xl md:w-fit md:h-fit md:drop-shadow-xl md:bg-white">
+          <Result average={average} />
+          <Summary setAverage={setAverage} />
+        </div>
 
-      <Attribution />
-    </div>
+        <Attribution />
+      </div>
+    </>
   );
 }
 
@@ -21,18 +35,18 @@ export default App;
 function Result({ average }) {
   return (
     <div
-      className="text-center bg-gradient-to-b from-indigo-600 to-indigo-800 p-10 rounded-b-4xl lg:w-96 lg:rounded-4xl"
-      // style={{
-      //   borderBottomRightRadius: "3rem",
-      //   borderBottomLeftRadius: "3rem",
-      // }}
+      className="text-center bg-gradient-to-b from-indigo-600 to-indigo-800 p-10 rounded-b-4xl w-88 rounded-4xl"
+      style={{
+        borderBottomRightRadius: "3rem",
+        borderBottomLeftRadius: "3rem",
+      }}
     >
       <h3 className="text-xl text-indigo-200 pb-6 font-medium">Your Result</h3>
-      <div className="rounded-full p-10 bg-gradient-to-b from-indigo-800 to-indigo-600 w-40 h-40 mb-8 mx-auto">
+      <div className="rounded-full p-12 bg-gradient-to-b from-indigo-800 to-indigo-600 w-44 h-44 mb-8 mx-auto">
         <h2 className="text-6xl text-indigo-50 font-bold">{average}</h2>
         <p className="text-indigo-500">of 100</p>
       </div>
-      <h2 className="text-2xl text-indigo-50 mb-2 font-medium">Great</h2>
+      <h2 className="text-2xl text-indigo-50 mb-2 mt-10 font-medium">Great</h2>
       <p className="text-indigo-300">
         You scored higher than 65% of the people who have taken these tests.
       </p>
@@ -56,7 +70,7 @@ function Summary({ setAverage }) {
   }, [reaction.score, memory.score, verbal.score, visual.score, setAverage]);
 
   return (
-    <div className="p-9 lg:w-96">
+    <div className="p-9 w-88">
       <h3 className="text-xl mb-7 font-medium">Summary</h3>
       <div className="space-y-4">
         {summaries.map((sum, i) => (
@@ -71,7 +85,7 @@ function Summary({ setAverage }) {
 }
 function Attribution() {
   return (
-    <div className="attribution lg:b-0">
+    <div className="attribution">
       Challenge by
       <a
         href="https://www.frontendmentor.io?ref=challenge"
